@@ -1,0 +1,14 @@
+{
+  "name": "crookes-ca",
+  "version": "0.1.0",
+  "description": "Homepage of web developer Christopher Crookes",
+  "author": "Christopher Crookes chris@crookes.ca",
+  "dependencies": {
+    "body-parser": "^1.11.0",
+    "ejs": "^2.2.4",
+    "express": "^4.11.2",
+    "nodemailer": "^1.3.0",
+    "nodemailer-mailgun-transport": "^1.0.0",
+    "nodemailer-smtp-transport": "^0.1.13"
+  }
+}

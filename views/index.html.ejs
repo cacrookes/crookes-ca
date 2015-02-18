@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Christopher Crookes - Vancouver Based Web App Developer</title>
+</head>
+<body ng-app='app'>
+	<header>
+		<h1>Christopher Crookes</h1>
+		<p>Vancouver Based Web App Developer</p>
+	</header>
+	<div ng-controller="ContactController">
+		<form ng-submit="submit(contactform)" name="contactform">
+			<div ng-class="{ 'has-error': contactform.inputname.$invalid && submitted }">
+				<label for="inputName">Name</label>
+				<input ng-model="formData.inputName" type="text" id="inputName" name="inputName" placeholder="Please enter your name" required>
+			</div>
+			<div ng-class="{ 'has-error': contactform.inputEmail.$invalid && submitted }">
+				<label for="inputEmail">Email</label>
+				<input ng-model="formData.inputEmail" type="email" id="inputEmail" name="inputEmail" placeholder="Please enter your email address" required>
+			</div>
+			<div ng-class="{ 'has-error': contactform.inputSubject.$invalid && submitted }">
+				<label for="inputSubject">Subject</label>
+				<input ng-model="formData.inputSubject" type="text" id="inputSubject" name="inputSubject" placeholder="Email Subject" required>
+			</div>
+			<div ng-class="{ 'has-error': contactform.inputMessage.$invalid && submitted }">
+				<label for="inputMessage">Message</label>
+				<textarea ng-model="formData.inputMessage" type="text" id="inputMessage" name="inputMessage" placeholder="Please enter your message..." required></textarea>
+			</div>
+			<div>
+				<button type="submit" ng-disabled="submitButtonDisabled">
+					Send Mail
+				</button>
+			</div>
+
+		</form>
+		<p ng-class="result">{{ resultMessage }}</p>
+	</div>
+
+	
+	<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.3.13/angular.min.js'></script>
+	<script src='/app.js'></script>
+</body>
+</html>
