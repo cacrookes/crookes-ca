@@ -1,6 +1,6 @@
 var app = angular.module('app', []);
 
-app.controller('ContactController', function($scope, $http){
+app.controller('ContactController', function($scope, MailSvc){
 	$scope.result = 'hidden';
 	$scope.resultMessage = "";
 	$scope.formData;
@@ -12,7 +12,7 @@ app.controller('ContactController', function($scope, $http){
 		if (contactform.$valid) {
 			console.log("posting mail");
 			console.log($scope.formData);
-			$http.post('/api/sendmail', $scope.formData)
+			MailSvc.send($scope.formData)
 			.success(function(data){
 				console.log("Return data: " + data);
 				$scope.submitButtonDisable = true;
@@ -29,6 +29,10 @@ app.controller('ContactController', function($scope, $http){
 			$scope.result='bg-danger';
 		}
 	}
+});
 
-
+app.service('MailSvc', function ($http){
+	this.send = function(formData){
+		return $http.post('/api/sendmail', formData);
+	}
 });
