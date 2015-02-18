@@ -1,0 +1,27 @@
+<div class='container'>
+	<form ng-submit="submit(contactform)" name="contactform">
+		<div ng-class="{ 'has-error': contactform.inputname.$invalid && submitted }">
+			<label for="inputName">Name</label>
+			<input ng-model="formData.inputName" type="text" id="inputName" name="inputName" placeholder="Please enter your name" required>
+		</div>
+		<div ng-class="{ 'has-error': contactform.inputEmail.$invalid && submitted }">
+			<label for="inputEmail">Email</label>
+			<input ng-model="formData.inputEmail" type="email" id="inputEmail" name="inputEmail" placeholder="Please enter your email address" required>
+		</div>
+		<div ng-class="{ 'has-error': contactform.inputSubject.$invalid && submitted }">
+			<label for="inputSubject">Subject</label>
+			<input ng-model="formData.inputSubject" type="text" id="inputSubject" name="inputSubject" placeholder="Email Subject" required>
+		</div>
+		<div ng-class="{ 'has-error': contactform.inputMessage.$invalid && submitted }">
+			<label for="inputMessage">Message</label>
+			<textarea ng-model="formData.inputMessage" type="text" id="inputMessage" name="inputMessage" placeholder="Please enter your message..." required></textarea>
+		</div>
+		<div>
+			<button type="submit" ng-disabled="submitButtonDisabled">
+				Send Mail
+			</button>
+		</div>
+
+	</form>
+	<p ng-class="result">{{ resultMessage }}</p>
+</div>
