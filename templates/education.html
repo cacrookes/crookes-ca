@@ -1,3 +1,11 @@
 <div class='container'>
 	<nav-panel></nav-panel>
+    <div ng-repeat="course in courses" class="row">
+    	<div class="col-md-6 col-md-offset-2 col-sm-8 col-sm-offset-0 col-xs-8">
+            {{course.name}}<small><a href="{{course.course_link}}" target="_blank">(course)</a><a href="{{course.certificate_link}}" target="_blank">(certificate)</a></small>
+        </div>
+        <div class="col-md-4">
+        	<img src="{{getLogo(course.school)}}" alt="{{course.school}}" height="42">
+        </div>                   
+    </div>
 </div>
