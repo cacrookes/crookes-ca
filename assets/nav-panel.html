@@ -1,0 +1,5 @@
+<ul class='nav navbar-nav'>
+	<li ng-repeat="navlink in navlinks" ng-hide="{{isActive(navlink)}}" id="{{navlink.title}}-link">
+		<a href="/#{{navlink.path}}"><span>{{navlink.title}}</span></a>
+	</li>
+</ul>
