@@ -30,6 +30,9 @@ node_modules
 # Sensitive data
 config
 
+# Hidden Mac files
+.DS_Store
+
 #temporary files
 *.swp
 *.swo
