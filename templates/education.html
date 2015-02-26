@@ -1,11 +1,24 @@
 <div class='container'>
 	<nav-panel></nav-panel>
-    <div ng-repeat="course in courses" class="row">
-    	<div class="col-md-6 col-md-offset-2 col-sm-8 col-sm-offset-0 col-xs-8">
-            {{course.name}}<small><a href="{{course.course_link}}" target="_blank">(course)</a><a href="{{course.certificate_link}}" target="_blank">(certificate)</a></small>
-        </div>
-        <div class="col-md-4">
-        	<img src="{{course.school_logo}}" alt="{{course.school}}" height="42">
-        </div>
-    </div>
+
+	<div class="row">
+		<div class="col-md-6 col-md-offset-2 col-sm-8 col-sm-offset-0 col-xs-8">
+			<strong>University of Waterloo</strong> - Bachelor of Mathematics, Computer Science, Honours, Co-Operative Program
+		</div>
+		<div class="col-md-4">
+			<img src="/img/Uwaterloo_seal.gif" alt="University of Waterloo" height="42" width="42">
+		</div>
+	</div>
+	<div id='continuingEd'>
+		<h2>Continuing Education</h2>
+		<div ng-repeat="course in courses" class="row">
+			<div class="col-md-6 col-md-offset-2 col-sm-8 col-sm-offset-0 col-xs-8">
+				{{course.name}}<small><a href="{{course.course_link}}" target="_blank">(course)</a><a href="{{course.certificate_link}}" target="_blank">(certificate)</a></small>
+			</div>
+			<div class="col-md-4">
+				<img src="{{course.school_logo}}" alt="{{course.school}}" height="42">
+			</div>
+		</div>
+	</div>
+
 </div>
