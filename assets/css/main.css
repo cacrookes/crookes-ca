@@ -1,3 +1,4 @@
+/* ==== Site Colours =======================*/
 html {
   color: #222;
   font-size: 1em;
@@ -46,28 +47,7 @@ textarea {
    ========================================================================== */
 body {
   font: 16px/26px Helvetica, Helvetica Neue, Arial;
-}
-.wrapper {
-  width: 90%;
-  margin: 0 5%;
-}
-/* ===================
-    ALL: Orange Theme
-   =================== */
-.header-container {
-  border-bottom: 20px solid #e44d26;
-}
-.footer-container,
-.main aside {
-  border-top: 20px solid #e44d26;
-}
-.header-container,
-.footer-container,
-.main aside {
-  background: #f16529;
-}
-.title {
-  color: #fff;
+  background: #800000;
 }
 /* ==============
     MOBILE: Menu
@@ -78,14 +58,9 @@ nav ul {
   list-style-type: none;
 }
 nav a {
-  display: block;
-  margin-bottom: 10px;
-  padding: 15px 0;
   text-align: center;
   text-decoration: none;
   font-weight: bold;
-  color: #fff;
-  background: #e44d26;
 }
 nav a:hover,
 nav a:visited {
@@ -120,13 +95,63 @@ nav a:hover {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+header {
+  color: #fff;
+  background: #800000;
+  padding-left: 2em;
+}
+#homePage,
+#Home-link a {
+  background: #800000;
+}
+#aboutPage,
+#About-link a {
+  background: #008000;
+}
+#educationPage,
+#Education-link a {
+  background: #ff0;
+}
+#skillsPage,
+#Skills-link a {
+  background: #800080;
+}
+#contactPage,
+#Contact-link a {
+  background: #00f;
+}
+@media only screen and (min-width: 768px) {
+  html,
+  body {
+    height: 100%;
+  }
+  #wrapper {
+    display: table;
+    height: 100%;
+    width: 100%;
+  }
+  header {
+/*top: 0;
+    left: 0;
+    width: 400px;
+    position: absolute;*/
+    width: 400px;
+  }
+  header,
+  #pageView {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  #footer {
+    display: table-row;
+    height: 1px;
+  }
+}
 /* ==========================================================================
    Media Queries
    ========================================================================== */
 @media only screen and (min-width: 480px) {
   nav a {
-    float: left;
-    width: 27%;
     margin: 0 1.7%;
     padding: 25px 2%;
     margin-bottom: 0;
@@ -153,10 +178,6 @@ nav a:hover {
   }
   .title {
     float: left;
-  }
-  nav {
-    float: right;
-    width: 38%;
   }
   .main article {
     float: left;

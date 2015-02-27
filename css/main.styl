@@ -1,3 +1,10 @@
+/* ==== Site Colours =======================*/
+homeColour = #800000;
+aboutColour = green;
+educationColour = yellow;
+skillsColour = purple;
+contactColour = blue;
+
 html{
     color: #222;
     font-size: 1em;
@@ -56,35 +63,10 @@ textarea {
 
 body {
     font: 16px/26px Helvetica, Helvetica Neue, Arial;
+    background: homeColour;
 }
 
-.wrapper {
-    width: 90%;
-    margin: 0 5%;
-}
 
-/* ===================
-    ALL: Orange Theme
-   =================== */
-
-.header-container {
-    border-bottom: 20px solid #e44d26;
-}
-
-.footer-container,
-.main aside {
-    border-top: 20px solid #e44d26;
-}
-
-.header-container,
-.footer-container,
-.main aside {
-    background: #f16529;
-}
-
-.title {
-    color: white;
-}
 
 /* ==============
     MOBILE: Menu
@@ -97,16 +79,9 @@ nav ul {
 }
 
 nav a {
-    display: block;
-    margin-bottom: 10px;
-    padding: 15px 0;
-
     text-align: center;
     text-decoration: none;
     font-weight: bold;
-
-    color: white;
-    background: #e44d26;
 }
 
 nav a:hover,
@@ -152,19 +127,73 @@ nav a:hover {
    Author's custom styles
    ========================================================================== */
 
+header{
+  color: #fff;
+  background: maroon;
+  padding-left: 2em;
+}
+
+//Set background colours for pages and nav buttons
+#homePage, #Home-link a{
+  background: homeColour;
+}
+
+#aboutPage, #About-link a{
+  background: aboutColour;
+}
+
+#educationPage, #Education-link a{
+  background: educationColour;
+}
+
+#skillsPage, #Skills-link a{
+  background: skillsColour;
+}
+
+#contactPage, #Contact-link a{
+  background: contactColour;
+}
+
+@media only screen and (min-width: 480px) {
+
+}
+
+@media only screen and (min-width: 768px) {
+  html, body{
+    //border-left: 400px solid maroon;
+    height: 100%;
+  }
+
+  #wrapper{
+    display: table;
+    height: 100%;
+    width: 100%;
+  }
+
+  header{
+    /*top: 0;
+    left: 0;
+    width: 400px;
+    position: absolute;*/
+    width: 400px;
+  }
+
+  header, #pageView{
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  #footer{
+    display: table-row;
+    height: 1px;
+  }
 
 
+}
 
+@media only screen and (min-width: 1140px) {
 
-
-
-
-
-
-
-
-
-
+}
 
 /* ==========================================================================
    Media Queries
@@ -177,8 +206,6 @@ nav a:hover {
    ==================== */
 
     nav a {
-        float: left;
-        width: 27%;
         margin: 0 1.7%;
         padding: 25px 2%;
         margin-bottom: 0;
@@ -226,10 +253,6 @@ nav a:hover {
         float: left;
     }
 
-    nav {
-        float: right;
-        width: 38%;
-    }
 
 /* ============
     WIDE: Main
