@@ -1,4 +1,21 @@
 <div class='container'>
 	<nav-panel></nav-panel>
-
+	<div id='currentSkills'>
+		<h2>Currently Using</h2>
+		<ul ng-repeat="skill in skills | filter: {activity: 'Current'} | orderBy: 'name'">
+			<li>{{skill.name}}</li>
+		</ul>
+	</div>
+	<div id='recentSkills'>
+		<h2>Recently Used</h2>
+		<ul ng-repeat="skill in skills | filter: {activity: 'Recent'} | orderBy: 'name'">
+			<li>{{skill.name}}</li>
+		</ul>
+	</div>
+	<div id='rustySkills'>
+		<h2>Getting Rusty</h2>
+		<ul ng-repeat="skill in skills | filter: {activity: 'Rusty'} | orderBy: 'name'">
+			<li>{{skill.name}}</li>
+		</ul>
+	</div>
 </div>
