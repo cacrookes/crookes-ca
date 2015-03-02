@@ -133,24 +133,28 @@ header{
   padding-left: 2em;
 }
 
+#pageView{
+  padding: 3em;
+}
+
 //Set background colours for pages and nav buttons
-#homePage, #Home-link a{
+.homePage, #Home-link a{
   background: homeColour;
 }
 
-#aboutPage, #About-link a{
+.aboutPage, #About-link a{
   background: aboutColour;
 }
 
-#educationPage, #Education-link a{
+.educationPage, #Education-link a{
   background: educationColour;
 }
 
-#skillsPage, #Skills-link a{
+.skillsPage, #Skills-link a{
   background: skillsColour;
 }
 
-#contactPage, #Contact-link a{
+.contactPage, #Contact-link a{
   background: contactColour;
 }
 
@@ -170,11 +174,11 @@ header{
     width: 100%;
   }
 
+  nav{
+    margin-bottom: 3em;
+  }
+
   header{
-    /*top: 0;
-    left: 0;
-    width: 400px;
-    position: absolute;*/
     width: 400px;
   }
 
@@ -188,6 +192,10 @@ header{
     height: 1px;
   }
 
+  .aboutPage p{
+    font-size: 1.5em;
+    line-height: 1.5em;
+  }
 
 }
 

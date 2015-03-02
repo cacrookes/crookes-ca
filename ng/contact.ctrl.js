@@ -1,5 +1,6 @@
 angular.module('app')
 .controller('ContactCtrl', function($scope, MailSvc){
+	$scope.pageId = 'contactPage'
 	$scope.result = 'hidden';
 	$scope.resultMessage = "";
 	$scope.formData;

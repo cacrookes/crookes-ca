@@ -15,6 +15,7 @@
 
 	<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.3.13/angular.min.js'></script>
 	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.13/angular-route.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.13/angular-animate.js"></script>
   <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 	<title>Christopher Crookes - Vancouver Based Web App Developer</title>
 </head>
@@ -24,7 +25,7 @@
 			<h1>Christopher Crookes</h1>
 			<p>Vancouver Based Web App Developer</p>
 		</header>
-		<div ng-view id='pageView'>
+		<div ng-view id='pageView' ng-class='pageId'>
 
 		</div>
 		<div id='footer'>

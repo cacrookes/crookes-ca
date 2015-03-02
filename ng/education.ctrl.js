@@ -1,5 +1,6 @@
 angular.module('app')
 .controller('EducationCtrl', function($scope){
+	$scope.pageId = 'educationPage'
 	//defines completed courses in continuing education section
 	$scope.courses = [
 		{

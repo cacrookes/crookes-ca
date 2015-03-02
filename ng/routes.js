@@ -2,10 +2,12 @@ angular.module('app')
 .config(function($routeProvider){
 	$routeProvider
 		.when('/', {
-			templateUrl: '/templates/home.html'
+			templateUrl: '/templates/home.html',
+			controller: 'HomeCtrl'
 		})
 		.when('/about', {
-			templateUrl: '/templates/about.html'
+			templateUrl: '/templates/about.html',
+			controller: 'AboutCtrl'
 		})
 		.when('/education', {
 			templateUrl: '/templates/education.html',

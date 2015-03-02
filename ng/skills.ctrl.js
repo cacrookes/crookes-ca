@@ -1,5 +1,6 @@
 angular.module('app')
 .controller('SkillsCtrl', function($scope){
+  $scope.pageId = 'skillsPage'
   $scope.skills = [
     {
       name: 'JavaScript',

@@ -100,23 +100,26 @@ header {
   background: #800000;
   padding-left: 2em;
 }
-#homePage,
+#pageView {
+  padding: 3em;
+}
+.homePage,
 #Home-link a {
   background: #800000;
 }
-#aboutPage,
+.aboutPage,
 #About-link a {
   background: #008000;
 }
-#educationPage,
+.educationPage,
 #Education-link a {
   background: #ff0;
 }
-#skillsPage,
+.skillsPage,
 #Skills-link a {
   background: #800080;
 }
-#contactPage,
+.contactPage,
 #Contact-link a {
   background: #00f;
 }
@@ -130,11 +133,10 @@ header {
     height: 100%;
     width: 100%;
   }
+  nav {
+    margin-bottom: 3em;
+  }
   header {
-/*top: 0;
-    left: 0;
-    width: 400px;
-    position: absolute;*/
     width: 400px;
   }
   header,
@@ -145,6 +147,10 @@ header {
   #footer {
     display: table-row;
     height: 1px;
+  }
+  .aboutPage p {
+    font-size: 1.5em;
+    line-height: 1.5em;
   }
 }
 /* ==========================================================================
