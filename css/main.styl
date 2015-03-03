@@ -1,9 +1,9 @@
 /* ==== Site Colours =======================*/
 homeColour = #800000;
-aboutColour = green;
-educationColour = yellow;
-skillsColour = purple;
-contactColour = blue;
+aboutColour = #006600;
+educationColour = #004d4d;
+skillsColour = #c05656;
+contactColour = #803a00;
 
 html{
     color: #222;
@@ -133,8 +133,10 @@ header{
   padding-left: 2em;
 }
 
-#pageView{
+.viewPage{
+  margin-right: 3em;
   padding: 3em;
+  background: #fff;
   //position: absolute;
   //width: 100%;
 //  height: 100%;
@@ -152,25 +154,55 @@ header{
 transform: translate3d(0, 0, 0);*/
 }
 
-//Set background colours for pages and nav buttons
-.homePage, #Home-link a{
+a{
+  text-decoration: none;
+  color: blue;
+}
+
+a:visited{
+  color: blue;
+}
+
+//Set background colours for nav buttons
+#homePage, #Home-link a{
   background: homeColour;
 }
 
-.aboutPage, #About-link a{
+#About-link a{
   background: aboutColour;
 }
 
-.educationPage, #Education-link a{
+#Education-link a{
   background: educationColour;
 }
 
-.skillsPage, #Skills-link a{
+#Skills-link a{
   background: skillsColour;
 }
 
-.contactPage, #Contact-link a{
+#Contact-link a{
   background: contactColour;
+}
+
+#contactPage input, #contactPage textarea{
+  padding: 5px;
+  border-radius:5px;
+  margin-bottom: 1.5em
+}
+
+#contactPage input{
+
+  width: 300px;
+
+}
+
+#contactPage textarea{
+  height: 250px;
+  width: 500px;
+}
+
+#contactPage label{
+  font-weight: bold;
 }
 
 @media only screen and (min-width: 480px) {

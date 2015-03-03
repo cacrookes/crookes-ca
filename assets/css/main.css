@@ -100,8 +100,10 @@ header {
   background: #800000;
   padding-left: 2em;
 }
-#pageView {
+.viewPage {
+  margin-right: 3em;
   padding: 3em;
+  background: #fff;
 /*  -webkit-transform-style: preserve-3d;
 	-moz-transform-style: preserve-3d;
 	-o-transform-style: preserve-3d;
@@ -115,25 +117,44 @@ header {
 -moz-transform: translate3d(0, 0, 0);
 transform: translate3d(0, 0, 0);*/
 }
-.homePage,
+a {
+  text-decoration: none;
+  color: #00f;
+}
+a:visited {
+  color: #00f;
+}
+#homePage,
 #Home-link a {
   background: #800000;
 }
-.aboutPage,
 #About-link a {
-  background: #008000;
+  background: #060;
 }
-.educationPage,
 #Education-link a {
-  background: #ff0;
+  background: #004d4d;
 }
-.skillsPage,
 #Skills-link a {
-  background: #800080;
+  background: #c05656;
 }
-.contactPage,
 #Contact-link a {
-  background: #00f;
+  background: #803a00;
+}
+#contactPage input,
+#contactPage textarea {
+  padding: 5px;
+  border-radius: 5px;
+  margin-bottom: 1.5em;
+}
+#contactPage input {
+  width: 300px;
+}
+#contactPage textarea {
+  height: 250px;
+  width: 500px;
+}
+#contactPage label {
+  font-weight: bold;
 }
 @media only screen and (min-width: 768px) {
   html,

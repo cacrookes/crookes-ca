@@ -4,7 +4,7 @@ angular.module('app')
   $scope.skills = [
     {
       name: 'JavaScript',
-      activity: 'Recent'
+      activity: 'Current'
     },
     {
       name: 'AngularJS',

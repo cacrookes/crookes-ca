@@ -6,7 +6,7 @@ var config = require('../../config/config');
 var auth = {
 	auth: {
 		api_key: config.mail.api_key,
-		domain: config.mail.domain 
+		domain: config.mail.domain
 	}
 }
 
@@ -17,7 +17,7 @@ router.post('/sendmail', function(req, res, next){
 	var mailOptions = {
 		from: fromField,
 		to: 'cacrookes@gmail.com',
-		subject: "Message from " + fromField + ": " + req.body.inputSubject,
+		subject: "Contact form (crookes.ca) message from " + fromField,
 		text: req.body.inputMessage
 	};
 	nodemailerMailgun.sendMail(mailOptions, function(error, info){
