@@ -156,6 +156,13 @@ a:visited {
 #contactPage label {
   font-weight: bold;
 }
+.skillsList {
+  float: left;
+  width: 33%;
+}
+div.clear {
+  clear: both;
+}
 @media only screen and (min-width: 768px) {
   html,
   body {
