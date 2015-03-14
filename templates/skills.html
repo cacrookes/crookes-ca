@@ -3,19 +3,19 @@
 	<h1>Skills</h1>
 	<div id='currentSkills' class='skillsList'>
 		<h2>Currently Using</h2>
-		<ul ng-repeat="skill in skills | filter: {activity: 'Current'} | orderBy: 'name'">
+		<ul ng-repeat="skill in skills | filter: {activity: 'Current'} | orderBy: 'name'" class='noStyle'>
 			<li>{{skill.name}}</li>
 		</ul>
 	</div>
 	<div id='recentSkills' class='skillsList'>
 		<h2>Recently Used</h2>
-		<ul ng-repeat="skill in skills | filter: {activity: 'Recent'} | orderBy: 'name'">
+		<ul ng-repeat="skill in skills | filter: {activity: 'Recent'} | orderBy: 'name'" class='noStyle'>
 			<li>{{skill.name}}</li>
 		</ul>
 	</div>
 	<div id='rustySkills' class='skillsList'>
 		<h2>Getting Rusty</h2>
-		<ul ng-repeat="skill in skills | filter: {activity: 'Rusty'} | orderBy: 'name'">
+		<ul ng-repeat="skill in skills | filter: {activity: 'Rusty'} | orderBy: 'name'" class='noStyle'>
 			<li>{{skill.name}}</li>
 		</ul>
 	</div>
