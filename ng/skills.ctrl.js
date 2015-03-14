@@ -1,6 +1,6 @@
 angular.module('app')
 .controller('SkillsCtrl', function($scope){
-  $scope.pageId = 'skillsPage'
+  $scope.pageId = 'skillsPage';
   $scope.skills = [
     {
       name: 'JavaScript',
@@ -68,11 +68,11 @@ angular.module('app')
     },
     {
       name: 'Python',
-      activity: 'Recent'
+      activity: 'Current'
     },
     {
       name: 'MS SQL Server',
       activity: 'Rusty'
     }
-  ]
+  ];
 });
