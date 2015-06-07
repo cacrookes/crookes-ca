@@ -103,16 +103,21 @@ header {
   color: #fff;
   background: #800000;
   padding-left: 2em;
+  text-align: center;
 }
 .viewPage {
   padding: 3em;
   background: #fff;
 }
 nav {
+  margin: 0;
   margin-bottom: 3em;
 }
 #homePage nav {
   margin-bottom: 0;
+}
+nav a {
+  margin: 0 auto 2em auto;
 }
 a {
   text-decoration: none;
@@ -174,6 +179,16 @@ div.clear {
   clear: both;
 }
 @media only screen and (min-width: 768px) {
+  nav {
+    width: 550px;
+    margin: 0 auto;
+  }
+  nav ul li a {
+    float: left;
+    margin-right: 2em;
+  }
+}
+@media only screen and (min-width: 1100px) {
   html,
   body {
     height: 100%;
@@ -191,8 +206,8 @@ div.clear {
     display: table-cell;
     vertical-align: middle;
   }
-  nav a {
-    float: left;
+  nav {
+    width: 100%;
   }
   .viewPage {
     margin-right: 3em;
@@ -215,15 +230,6 @@ div.clear {
    Media Queries
    ========================================================================== */
 @media only screen and (min-width: 480px) {
-  nav a {
-    margin-bottom: 0;
-  }
-  nav li:first-child a {
-    margin-left: 0;
-  }
-  nav li:last-child a {
-    margin-right: 0;
-  }
   nav ul li {
     display: inline;
   }
@@ -248,6 +254,12 @@ div.clear {
   .main aside {
     float: right;
     width: 28%;
+  }
+  nav li:first-child a {
+    margin-left: 0;
+  }
+  nav li:last-child a {
+    margin-right: 0;
   }
 }
 @media only screen and (min-width: 1140px) {

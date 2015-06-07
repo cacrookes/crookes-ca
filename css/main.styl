@@ -135,6 +135,7 @@ header{
   color: #fff;
   background: homeColour;
   padding-left: 2em;
+  text-align: center;
 }
 
 .viewPage{
@@ -143,11 +144,16 @@ header{
 }
 
 nav{
+  margin: 0;
   margin-bottom: 3em;
 }
 
 #homePage nav{
   margin-bottom: 0;
+}
+
+nav a{
+  margin: 0 auto 2em auto;
 }
 
 a{
@@ -232,6 +238,23 @@ div.clear{
 }
 
 @media only screen and (min-width: 768px) {
+  nav{
+    width: 550px;
+    margin: 0 auto;
+  }
+
+  nav ul{
+
+  }
+
+  nav ul li a{
+    float: left;
+    margin-right: 2em;
+  }
+
+}
+
+@media only screen and (min-width: 1100px) {
   html, body{
     //border-left: 400px solid maroon;
     height: 100%;
@@ -252,8 +275,8 @@ div.clear{
     vertical-align: middle;
   }
 
-  nav a{
-    float: left;
+  nav{
+    width: 100%;
   }
 
   .viewPage{
@@ -278,10 +301,6 @@ div.clear{
   }
 }
 
-@media only screen and (min-width: 1140px) {
-
-}
-
 /* ==========================================================================
    Media Queries
    ========================================================================== */
@@ -295,16 +314,10 @@ div.clear{
     nav a {
       //  margin: 0 1.7%;
       //  padding: 25px 2%;
-        margin-bottom: 0;
+      //  margin-bottom: 0;
     }
 
-    nav li:first-child a {
-        margin-left: 0;
-    }
 
-    nav li:last-child a {
-        margin-right: 0;
-    }
 
 /* ========================
     INTERMEDIATE: IE Fixes
@@ -354,6 +367,16 @@ div.clear{
         float: right;
         width: 28%;
     }
+
+    nav li:first-child a {
+        margin-left: 0;
+    }
+
+    nav li:last-child a {
+        margin-right: 0;
+    }
+
+
 }
 
 @media only screen and (min-width: 1140px) {
