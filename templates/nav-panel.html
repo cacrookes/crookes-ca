@@ -1,7 +1,9 @@
+<input type="checkbox" id="navbar-checkbox" class="navbar-checkbox">
 <nav>
 	<ul class='clearfix'>
 		<li ng-repeat="navlink in navlinks" ng-hide="{{isActive(navlink)}}" id="{{navlink.title}}-link">
 			<a href="/#{{navlink.path}}"><span>{{navlink.title}}</span></a>
 		</li>
 	</ul>
+	<label for="navbar-checkbox" class="navbar-handle"></label>
 </nav>
