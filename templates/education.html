@@ -30,6 +30,12 @@
 				{{course.name}}<small><a href="{{course.course_link}}" target="_blank">(course)</a><a href="{{course.certificate_link}}" target="_blank">(certificate)</a></small>
 			</div>
 		</div>
+		<h3><img src="/img/mongodb_university_logo.png" alt="MongoDB University" height="42"></h3>
+		<div ng-repeat="course in courses | filter: {school: 'mongodb'}" class="row">
+			<div>
+				{{course.name}}<small><a href="{{course.course_link}}" target="_blank">(course)</a><a href="{{course.certificate_link}}" target="_blank">(certificate)</a></small>
+			<div>
+		</div>
 	</div>
 
 </div>

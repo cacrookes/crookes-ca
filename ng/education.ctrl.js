@@ -32,6 +32,12 @@ angular.module('app')
 			course_link: 'https://www.udacity.com/course/cs255',
 			certificate_link: 'files/html5-game-dev-certificate.pdf',
 			school: 'udacity'
+		},
+		{
+			name: 'M101JS: MongoDB For NODE.JS Developers',
+			course_link: 'https://university.mongodb.com/courses/M101JS/about',
+			certificate_link: 'files/Nodejs-mongodb.pdf',
+			school: 'mongodb'
 		}
 	];
 
