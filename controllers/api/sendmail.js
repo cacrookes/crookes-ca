@@ -1,26 +1,28 @@
 var router = require('express').Router();
 var nodemailer = require('nodemailer');
-var mg = require('nodemailer-mailgun-transport');
+var smtpTransport = require('nodemailer-smtp-transport');
 var config = require('../../config/config');
 
+//grab authentication data from the config module
 var auth = {
-	auth: {
-		api_key: config.mail.api_key,
-		domain: config.mail.domain
-	}
-}
+	user: config.mail.user,
+	pass: config.mail.pass
+};
 
-var nodemailerMailgun = nodemailer.createTransport(mg(auth));
+var transport = nodemailer.createTransport(smtpTransport({
+	service: 'zoho',
+	auth: auth
+}));
 
 router.post('/sendmail', function(req, res, next){
 	var fromField = req.body.inputName + " <" + req.body.inputEmail + ">";
 	var mailOptions = {
-		from: fromField,
-		to: 'cacrookes@gmail.com',
+		from: 'chris@crookes.ca',
+		to: 'chris@crookes.ca',
 		subject: "Contact form (crookes.ca) message from " + fromField,
 		text: req.body.inputMessage
 	};
-	nodemailerMailgun.sendMail(mailOptions, function(error, info){
+	transport.sendMail(mailOptions, function(error, info){
 		if(error){
 			console.log(error);
 			res.status(500).json({success: false, message: "Error sending message"});
