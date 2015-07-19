@@ -66,6 +66,7 @@ nav a {
   padding: 15px;
   width: 80px;
 }
+nav a:link,
 nav a:hover,
 nav a:visited {
   color: #fff;
