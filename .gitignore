@@ -21,6 +21,7 @@ build/Release
 
 # Compile files
 assets/js/app.js
+assets/css/main.css
 
 # Dependency directory
 # Commenting this out is preferred by some people, see
