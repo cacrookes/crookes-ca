@@ -23,40 +23,37 @@ angular.module('app')
 		$scope.emailData = angular.copy(oriEmailData);
 	};
 
+	// shows a confirmation message, indicating whether the mail was successfully
+	// sent or not
+	var showMessage = function(message){
+		$scope.resultMessage = message;
+		$scope.showResult = true;
+		//hide message after 10 seconds
+		$timeout(function(){
+				$scope.showResult = false;
+		}, 5000);
+	};
 
 	//resultMessage displays a success or failure message below the form
 	$scope.resultMessage = "";
 	$scope.showResult = false;
+	//sendError is used for applying css styles to the confirmation message
+	$scope.sendError = false;
 	$scope.submit = function(contactform){
 		//checks if form passes clientside validtation
 		if (contactform.$valid) {
-			resetForm();
-			//display confirmation message
-			$scope.resultMessage = "Message sent!";
-			$scope.showResult = true;
-			//hide message after 10 seconds
-			$timeout(function(){
-					$scope.showResult = false;
-			}, 5000);
-
-/*			MailSvc.send($scope.emailData)
+			MailSvc.send($scope.emailData)
 			.success(function(data){
 				//mail service returned the mail was successfully sent
-				$scope.resultMessage = "Message sent!";
-				alert("Message Sent! Thank you!");
-				//clear the form
-				$scope.contactform.$setPristine();
-				$scope.contactform.$setUntouched();
-				$scope.contactform.emailData={
-					inputName: "",
-					inputEmail: "",
-					inputMessage: ""
-				};
+				resetForm();
+				$scope.sendError = false;
+				//display confirmation message
+				showMessage("Message sent!");
 			}).error(function(data, status){
 				//mail service returned an error
-				$scope.resultMessage = data.message;
-				alert("Error in sending message: " + data.message);
-			});*/
+				$scope.sendError = true;
+				showMessage("Error: " + data.message);
+			});
 		}else{
 			//form did not pass clientside validation. Since the submit button
 			//is not active if the form is invalid, this should never be reached.

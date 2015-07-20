@@ -1,7 +1,7 @@
 <div id='contactPage' class='container viewPage'>
 	<nav-panel></nav-panel>
 	<h1>Contact Me</h1>
-	<div ng-model="resultMessage" class="emailResult message fadein fadeout" ng-show="showResult">{{ resultMessage }}</div>
+	<div ng-model="resultMessage" class="emailResult message fadein fadeout" ng-class="{'sendError': sendError}" ng-show="showResult">{{ resultMessage }}</div>
 	<form ng-submit="submit(contactform)" name="contactform" novalidate>
 		<div class="form-group" ng-class="{ 'has-error': contactform.inputName.$touched && contactform.inputName.$invalid }">
 			<label for="inputName">Name</label><br/>
