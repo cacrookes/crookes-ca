@@ -1,8 +1,14 @@
 angular.module('app')
 .controller('EducationCtrl', function($scope){
 	$scope.pageId = 'educationPage'
-	//defines completed courses in continuing education section
+	// defines completed courses in continuing education section
 	$scope.courses = [
+		{
+			name: 'Udacity: Fullstack Web Developer Nanodegree',
+			course_link: 'https://www.udacity.com/course/full-stack-web-developer-nanodegree--nd004',
+			certificate_link: 'files/fsd-nanodegree-certificate.pdf',
+			school: 'udacity'
+		},
 		{
 			name: 'BerkeleyX: CS188.1x Artificial Intelligence',
 			course_link: 'https://www.edx.org/course/uc-berkeleyx/uc-berkeleyx-cs188-1x-artificial-579#.U0HdDPldXng',

@@ -57,8 +57,8 @@ angular.module('app')
 		}else{
 			//form did not pass clientside validation. Since the submit button
 			//is not active if the form is invalid, this should never be reached.
-			//$scope.resultMessage = 'Failed: Please fill out all fields';
-			//alert("Please fill out all fields before sending");
+			//TODO: $scope.resultMessage = 'Failed: Please fill out all fields';
+			//TODO: alert("Please fill out all fields before sending");
 		}
 	};
 });

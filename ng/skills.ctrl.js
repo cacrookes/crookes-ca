@@ -40,7 +40,7 @@ angular.module('app')
     },
     {
       name: 'Wordpress',
-      activity: 'Recent'
+      activity: 'Rusty'
     },
     {
       name: 'Java',

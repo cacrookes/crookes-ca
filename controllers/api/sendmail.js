@@ -3,22 +3,24 @@ var nodemailer = require('nodemailer');
 var smtpTransport = require('nodemailer-smtp-transport');
 var config = require('../../config/config');
 
-//grab authentication data from the config module
+// grab authentication data from the config module
 var auth = {
 	user: config.mail.user,
 	pass: config.mail.pass
 };
 
+// setup smtp mail service transport
 var transport = nodemailer.createTransport(smtpTransport({
-	service: 'zoho',
+	service: config.mail.service,
 	auth: auth
 }));
 
+// send email to site account when posting to /sendmail route
 router.post('/sendmail', function(req, res, next){
 	var fromField = req.body.inputName + " <" + req.body.inputEmail + ">";
 	var mailOptions = {
-		from: 'chris@crookes.ca',
-		to: 'chris@crookes.ca',
+		from: config.mail.mailto,
+		to: config.mail.mailto,
 		subject: "Contact form (crookes.ca) message from " + fromField,
 		text: req.body.inputMessage
 	};
