@@ -2,44 +2,45 @@
 	<md-toolbar class="md-primary">
 		<h1>Education</h1>
 	</md-toolbar>
-	<section class="row university">
-		<div style='float:left; margin-right: 1em'>
-			<img src="/img/Uwaterloo_seal.gif" alt="University of Waterloo" height="42" width="42">
-		</div>
-		<div>
-			<h3>University of Waterloo</h3>
-			Bachelor of Mathematics, Computer Science, Honours, Co-Operative Program
-		</div>
-	</section>
-	<section id='continuingEd' class='clear'>
-		<h2>Continuing Education</h2>
-		<h3><img src="/img/Udacity_Logo.svg" alt="Udacity" height="42"></h3>
-		<div ng-repeat="course in courses | filter: {school: 'udacity'}" class="row">
-			<div>
-				{{course.name}}<small><a href="{{course.course_link}}" target="_blank">(course)</a><a href="{{course.certificate_link}}" target="_blank">(certificate)</a></small>
+	<div id="viewPageMain">
+		<section class="row university">
+			<div style='float:left; margin-right: 1em'>
+				<img src="/img/Uwaterloo_seal.gif" alt="University of Waterloo" height="42" width="42">
 			</div>
-		</div>
-		<md-divider></md-divider>
-		<h3><img src="/img/EdX.svg" alt="edx" height="42"></h3>
-		<div ng-repeat="course in courses | filter: {school: 'edx'}" class="row">
 			<div>
-				{{course.name}}<small><a href="{{course.course_link}}" target="_blank">(course)</a><a href="{{course.certificate_link}}" target="_blank">(certificate)</a></small>
+				<h3>University of Waterloo</h3>
+				Bachelor of Mathematics, Computer Science, Honours, Co-Operative Program
 			</div>
-		</div>
-		<md-divider></md-divider>
-		<h3><img src="/img/Coursera_logo.png" alt="Coursera" height="42"></h3>
-		<div ng-repeat="course in courses | filter: {school: 'coursera'}" class="row">
-			<div>
-				{{course.name}}<small><a href="{{course.course_link}}" target="_blank">(course)</a><a href="{{course.certificate_link}}" target="_blank">(certificate)</a></small>
+		</section>
+		<section id='continuingEd' class='clear'>
+			<h2>Continuing Education</h2>
+			<h3><img src="/img/Udacity_Logo.svg" alt="Udacity" height="42"></h3>
+			<div ng-repeat="course in courses | filter: {school: 'udacity'}" class="row">
+				<div>
+					{{course.name}}<small><a href="{{course.course_link}}" target="_blank">(course)</a><a href="{{course.certificate_link}}" target="_blank">(certificate)</a></small>
+				</div>
 			</div>
-		</div>
-		<md-divider></md-divider>
-		<h3><img src="/img/mongodb_university_logo.png" alt="MongoDB University" height="42"></h3>
-		<div ng-repeat="course in courses | filter: {school: 'mongodb'}" class="row">
-			<div>
-				{{course.name}}<small><a href="{{course.course_link}}" target="_blank">(course)</a><a href="{{course.certificate_link}}" target="_blank">(certificate)</a></small>
-			<div>
-		</div>
-	</section>
-
+			<md-divider></md-divider>
+			<h3><img src="/img/EdX.svg" alt="edx" height="42"></h3>
+			<div ng-repeat="course in courses | filter: {school: 'edx'}" class="row">
+				<div>
+					{{course.name}}<small><a href="{{course.course_link}}" target="_blank">(course)</a><a href="{{course.certificate_link}}" target="_blank">(certificate)</a></small>
+				</div>
+			</div>
+			<md-divider></md-divider>
+			<h3><img src="/img/Coursera_logo.png" alt="Coursera" height="42"></h3>
+			<div ng-repeat="course in courses | filter: {school: 'coursera'}" class="row">
+				<div>
+					{{course.name}}<small><a href="{{course.course_link}}" target="_blank">(course)</a><a href="{{course.certificate_link}}" target="_blank">(certificate)</a></small>
+				</div>
+			</div>
+			<md-divider></md-divider>
+			<h3><img src="/img/mongodb_university_logo.png" alt="MongoDB University" height="42"></h3>
+			<div ng-repeat="course in courses | filter: {school: 'mongodb'}" class="row">
+				<div>
+					{{course.name}}<small><a href="{{course.course_link}}" target="_blank">(course)</a><a href="{{course.certificate_link}}" target="_blank">(certificate)</a></small>
+				<div>
+			</div>
+		</section>
+	</div>
 </section>

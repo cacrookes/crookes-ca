@@ -142,16 +142,26 @@ header{
 }
 #mainHeader a{
   color: #FFF;
+  h1{
+    margin-top: 0;
+    padding-top: 1em;
+  }
 }
 
 .viewPage{
-  padding: 3em;
+  padding: 1.5em;
   background: #fff;
+  md-toolbar{
+    padding-left: 1.5em;
+  }
+  #viewPageMain{
+    padding: 0 1.5em;
+  }
 }
 
 nav{
   margin: 0;
-  margin-bottom: 3em;
+  margin-bottom: 1em;
 }
 
 #homePage nav{
@@ -342,62 +352,9 @@ div.clear{
 }
 
 @media only screen and (max-width: 767px){
-  .aboutPage, .educationPage, .skillsPage, .contactPage{
-    nav{
-      ul{
-        max-height: 0;
-        overflow: hidden;
-        margin: 0 3.5em 0 1em;
 
-        li{
-          visibility: hidden;
-          display: block;
-          padding: 0;
-          border: none;
 
-          a{
-            margin: 0 auto 1em auto;
-          }
-        }
-      }
-      .navbar-handle{
-        display: block;
-      }
-    }
 
-    #navbar-checkbox:checked + nav{
-      ul{
-        max-height: 350px;
-      }
-      li{
-        visibility: visible;
-      }
-    }
-
-    nav {
-      position: relative;
-      top: 0;
-      left: 0;
-      right: 0;
-    }
-
-    nav .navbar-handle {
-      position: absolute;
-      font-size: 1.2em;
-      top: 0;
-      right: 12px;
-      z-index: 10;
-    }
-
-    h1{
-      margin-top: 0;
-    }
-  }
-  .homePage{
-    nav ul li a{
-      margin: 0 auto 2em auto;
-    }
-  }
 }
 
 .navbar-checkbox{
@@ -435,17 +392,6 @@ div.clear{
 
 
 @media only screen and (min-width: 768px) {
-  nav{
-    width: 550px;
-    margin: 0 auto;
-  }
-
-
-
-  nav ul li a{
-    float: left;
-
-  }
 
 }
 
@@ -461,8 +407,28 @@ div.clear{
     width: 100%;
   }
 
-  header{
+  header#mainHeader{
     width: 400px;
+    padding-right: 2em;
+
+    a{
+      text-align: right;
+
+    }
+
+    nav{
+      width: 100%;
+
+      ul{
+        width: 300px;
+        float: right;
+        margin-right: -1em;
+        li a{
+          text-align: center;
+        }
+      }
+    }
+
   }
 
   header, #pageView{
@@ -470,13 +436,6 @@ div.clear{
     vertical-align: middle;
   }
 
-  nav{
-    width: 100%;
-
-    ul{
-      width: 300px;
-    }
-  }
 
   .viewPage{
     margin-right: 3em;
