@@ -4,75 +4,103 @@ angular.module('app')
   $scope.skills = [
     {
       name: 'JavaScript',
-      activity: 'Current'
+      activity: 'Current',
+      type: 'Language'
     },
     {
       name: 'AngularJS',
-      activity: 'Current'
+      activity: 'Current',
+      type: 'Framework'
     },
     {
       name: 'HTML5',
-      activity: 'Current'
+      activity: 'Current',
+      type: 'Language'
     },
     {
       name: 'CSS',
-      activity: 'Current'
+      activity: 'Current',
+      type: 'Language'
     },
     {
-      name: 'Node.js',
-      activity: 'Current'
+      name: 'Express (Node.js)',
+      activity: 'Current',
+      type: 'Framework'
     },
     {
       name: 'MongoDB',
-      activity: 'Current'
+      activity: 'Current',
+      type: 'Database'
     },
     {
       name: 'PHP',
       activity: 'Recent',
+      type: 'Language'
     },
     {
       name: 'MySQL',
-      activity: 'Recent'
+      activity: 'Recent',
+      type: 'Database'
     },
     {
       name: 'Drupal',
-      activity: 'Recent'
+      activity: 'Recent',
+      type: 'Framework'
     },
     {
       name: 'Wordpress',
-      activity: 'Rusty'
+      activity: 'Rusty',
+      type: 'Framework'
     },
     {
       name: 'Java',
-      activity: 'Rusty'
+      activity: 'Rusty',
+      type: 'Language'
     },
     {
       name: 'C/C++',
-      activity: 'Rusty'
+      activity: 'Rusty',
+      type: 'Language'
     },
     {
       name: 'ASP.NET',
-      activity: 'Rusty'
+      activity: 'Rusty',
+      type: 'Framework'
     },
     {
       name: 'C#',
-      activity: 'Rusty'
+      activity: 'Rusty',
+      type: 'Language'
     },
     {
       name: 'Visual Basic',
-      activity: 'Rusty'
+      activity: 'Rusty',
+      type: 'Language'
     },
     {
       name: 'Git',
-      activity: 'Current'
+      activity: 'Current',
+      type: 'VCS'
     },
     {
       name: 'Python',
-      activity: 'Current'
+      activity: 'Current',
+      type: 'Language'
     },
     {
       name: 'MS SQL Server',
-      activity: 'Rusty'
+      activity: 'Rusty',
+      type: 'Database'
+    },
+    {
+      name: 'PostgreSQL',
+      activity: 'Current',
+      type: 'Database'
+    },
+    {
+      name: 'Flask',
+      activity: 'Recent',
+      type: 'Framework'
     }
   ];
 });

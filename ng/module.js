@@ -1,4 +1,6 @@
 angular.module('app', [
   'ngRoute',
-  'ngAnimate'
+  'ngAnimate',
+  'ngMaterial',
+  'ngMessages'
 ]);

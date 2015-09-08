@@ -1,0 +1,46 @@
+<div id='contactPage' class='container viewPage'>
+	<h1>Contact Me</h1>
+	<div ng-model="resultMessage" class="emailResult message fadein fadeout" ng-class="{'sendError': sendError}" ng-show="showResult">{{ resultMessage }}</div>
+	<form ng-submit="submit(contactform)" name="contactform" novalidate>
+		<div class="form-group" ng-class="{ 'has-error': contactform.inputName.$touched && contactform.inputName.$invalid }">
+			<label for="inputName">Name</label><br/>
+			<input ng-model="emailData.inputName" type="text" id="inputName" name="inputName" placeholder="Your Name" required>
+			<!-- Error message from form validation -->
+			<div call="error" ng-show="contactform.inputName.$touched && contactform.inputName.$invalid">
+					<small class="error">
+						Please enter your name.
+					</small>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="inputEmail">Email Address</label><br/>
+			<input ng-model="emailData.inputEmail" type="email" id="inputEmail" name="inputEmail" placeholder="Your Email Address" required>
+			<!-- Error message from form validation, display different error message based on error -->
+			<div call="error" ng-show="contactform.inputEmail.$touched && contactform.inputEmail.$invalid">
+					<small class="error" ng-show="contactform.inputEmail.$error.required">
+						Please enter your email address.
+					</small>
+					<small class="error" ng-show="contactform.inputEmail.$error.email">
+						The email address you entered is invalid.
+					</small>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="inputMessage">Message</label><br/>
+			<textarea ng-model="emailData.inputMessage" type="text" id="inputMessage" name="inputMessage" placeholder="Please enter your message..." required></textarea>
+			<!-- Error message from form validation -->
+			<div call="error" ng-show="contactform.inputMessage.$touched && contactform.inputMessage.$invalid">
+					<small class="error">
+						Please enter a message.
+					</small>
+			</div>
+		</div>
+		<div>
+			<button type="submit" class="sendMailBtn" ng-disabled="contactform.$invalid">
+				Send Mail
+			</button>
+		</div>
+
+	</form>
+
+</div>
