@@ -6,7 +6,6 @@ angular.module('app')
 		controller: function($scope, $location){
 			//stores site links
 			$scope.navlinks = [
-				{title: 'Home',	path: '/'},
 				{title: 'About', path: '/about'},
 				{title: 'Education', path: '/education'},
 				{title: 'Skills', path: '/skills'},
