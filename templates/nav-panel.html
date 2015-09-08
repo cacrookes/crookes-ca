@@ -2,7 +2,8 @@
 <nav>
 	<ul class='clearfix'>
 		<li ng-repeat="navlink in navlinks"  id="{{navlink.title}}-link">
-			<a href="/#{{navlink.path}}"><span>{{navlink.title}}</span></a>
+			<!--<a href="/#{{navlink.path}}"><span>{{navlink.title}}</span></a>-->
+			<md-button class="md-raised" href="/#{{navlink.path}}">{{navlink.title}}</md-button>
 		</li>
 	</ul>
 	<label for="navbar-checkbox" class="navbar-handle"></label>
