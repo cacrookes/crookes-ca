@@ -2,7 +2,45 @@
 	<md-toolbar class="md-primary">
 		<h1>Skills</h1>
 	</md-toolbar>
-	<div id="viewPageMain">
-		<p>Test, test, test</p>
-	</div>
+	<md-list id="viewPageMain">
+		<md-list-item id="skillLegend" layout-sm="column" layout-gt-sm="row" layout-align="start start">
+			<div class="skillLabel" flex-gt-sm="25">
+				<strong>Legend:</strong>
+			</div>
+			<div layout-fill>
+				<div class="skillCurrent skillList">
+					Used in the past year - Green
+				</div>
+				<div class="skillRecent skillList">
+					Used in the past 3 years - Blue
+				</div>
+				<div class="skillPast skillList">
+					Used earlier in my career - Orange
+				</div>
+			</div>
+		</md-list-item>
+		<md-list-item class='skillCategory' layout-sm="column" layout-gt-sm="row" layout-align="start start" ng-repeat="category in categories">
+			<div class="skillLabel" flex-gt-sm="25">
+				<strong>{{category}}{{ (category === "Miscellaneous") ? '' : 's' }}: </strong>
+			</div>
+			<div layout-fill>
+				<div class='skillCurrent'>
+					<span class='skillList' ng-repeat="skill in skills | filter: {type: category} | filter: {activity: 'Current'}  | orderBy: 'name'">
+						{{skill.name}}{{$last ? '' : ', '}}
+					</span>
+				</div>
+				<div class='skillRecent'>
+					<span class='skillList' ng-repeat="skill in skills | filter: {type: category} | filter: {activity: 'Recent'}  | orderBy: 'name'">
+						{{skill.name}}{{$last ? '' : ', '}}
+					</span>
+				</div>
+				<div class='skillPast'>
+					<span class='skillList' ng-repeat="skill in skills | filter: {type: category} | filter: {activity: 'Rusty'}  | orderBy: 'name'">
+						{{skill.name}}{{$last ? '' : ', '}}
+					</span>
+				</div>
+			</div>
+			<!-- <md-divider ng-if="!$last"></md-divider> -->
+		</md-list-item>
+	</md-list>
 </section>

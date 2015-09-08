@@ -1,6 +1,9 @@
 angular.module('app')
 .controller('SkillsCtrl', function($scope){
   $scope.pageId = 'skillsPage';
+  $scope.categories = [
+    'Language', 'Framework', 'Database', 'Miscellaneous'
+  ];
   $scope.skills = [
     {
       name: 'JavaScript',
@@ -80,7 +83,7 @@ angular.module('app')
     {
       name: 'Git',
       activity: 'Current',
-      type: 'VCS'
+      type: 'Miscellaneous'
     },
     {
       name: 'Python',
