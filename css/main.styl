@@ -90,7 +90,7 @@ nav a {
     font-weight: bold;
     margin-right: 1em;
     padding: 15px;
-    width: 120px;
+    width: 130px;
 }
 
 nav a:hover,
@@ -152,8 +152,10 @@ header{
   padding: 1.5em;
   background: #fff;
   md-toolbar{
-    padding-left: 1.5em;
     margin-bottom: 2em;
+    h1{
+      padding-left: 5px;
+    }
   }
   max-width: 1100px;
   #viewPageMain{
@@ -164,6 +166,9 @@ header{
 nav{
   margin: 0;
   margin-bottom: 1em;
+  md-icon{
+    color: white;
+  }
 }
 
 #homePage nav{
@@ -312,40 +317,6 @@ div.clear{
 
 }
 
-.navbar-checkbox{
-  display: none;
-}
-
-.navbar-handle {
-  display: none;
-  cursor: pointer;
-  position: relative;
-  font-size: 45px;
-  padding: .5em 0;
-  height: 0;
-  width: 1.66666667em;
-  border-top: 0.13333333em solid;
-}
-
-.navbar-handle:before,
-.navbar-handle:after {
-  position: absolute;
-  left: 0;
-  right: 0;
-  content: ' ';
-  border-top: 0.13333333em solid;
-}
-
-.navbar-handle:before {
-  top: 0.37777778em;
-}
-
-.navbar-handle:after {
-  top: 0.88888889em;
-}
-
-
-
 @media only screen and (min-width: 768px) {
 
 }
@@ -396,21 +367,17 @@ div.clear{
     margin-right: 3em;
   }
 
-  #footer{
-    display: table-row;
-    height: 1px;
-  }
+  // #footer{
+  //   display: table-row;
+  //   height: 1px;
+  // }
 
-  .aboutPage p{
-    font-size: 1.5em;
-    line-height: 1.5em;
-  }
+  // .aboutPage p{
+  //   font-size: 1.5em;
+  //   line-height: 1.5em;
+  // }
 
 }
-
-
-
-
 
 
 /* ==========================================================================

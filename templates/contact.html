@@ -1,12 +1,16 @@
 <section id='contactPage' class='container viewPage' layout="column" md-theme="contactTheme">
 	<md-toolbar class="md-primary">
-		<h1>Contact Me</h1>
+		<div class="md-toolbar-tools">
+			<md-icon>email</md-icon>
+			<h1><span>Contact Me</span></h1>
+			<span flex></span>
+		</div>
 	</md-toolbar>
 	<div id="viewPageMain">
 		<md-content layout-padding>
 			<form ng-submit="submit(contactform)" name="contactform" novalidate>
 				<md-input-container>
-					<label for="inputName">Name</label>
+					<label for="inputName"><md-icon>person</md-icon>Name</label>
 					<input ng-model="emailData.inputName" type="text" id="inputName" name="inputName" required>
 					<!-- Error message from form validation -->
 					<div ng-messages="contactform.inputName.$error" ng-show="contactform.inputName.$touched">
@@ -14,7 +18,7 @@
 					</div>
 				</md-input-container>
 				<md-input-container>
-					<label for="inputEmail">Email Address</label><br/>
+					<label for="inputEmail"><md-icon>email</md-icon>Email Address</label><br/>
 					<input ng-model="emailData.inputEmail" type="email" id="inputEmail" name="inputEmail" required>
 					<!-- Error message from form validation, display different error message based on error -->
 					<div ng-messages="contactform.inputEmail.$error" ng-show="contactform.inputEmail.$touched">
@@ -23,7 +27,7 @@
 					</div>
 				</md-input-container>
 				<md-input-container>
-					<label for="inputMessage">Message</label><br/>
+					<label for="inputMessage"><md-icon>message</md-icon>Message</label><br/>
 					<textarea ng-model="emailData.inputMessage" type="text" id="inputMessage" name="inputMessage" required></textarea>
 					<!-- Error message from form validation -->
 					<div ng-messages="contactform.inputMessage.$error" ng-show="contactform.inputMessage.$touched">
@@ -31,7 +35,10 @@
 					</div>
 				</md-input-container>
 				<div layout="row" layout-sm="column">
-					<md-button type="submit" class="md-raised md-primary emailButton" ng-disabled="contactform.$invalid">Send Mail</md-button>
+					<md-button type="submit" class="md-raised md-primary emailButton" ng-disabled="contactform.$invalid">
+						<md-icon>send</md-icon>
+						Send Mail
+					</md-button>
 					<div ng-model="resultMessage" class="emailResult fadein fadeout" ng-class="{'sendError': sendError}" ng-show="showResult">{{ resultMessage }}</div>
 				</div>
 

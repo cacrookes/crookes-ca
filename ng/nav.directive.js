@@ -6,10 +6,10 @@ angular.module('app')
 		controller: function($scope, $location){
 			//stores site links
 			$scope.navlinks = [
-				{title: 'About', path: '/about'},
-				{title: 'Education', path: '/education'},
-				{title: 'Skills', path: '/skills'},
-				{title: 'Contact', path: '/contact'}
+				{title: 'About', icon: 'face', path: '/about'},
+				{title: 'Education', icon: 'school', path: '/education'},
+				{title: 'Skills', icon: 'build', path: '/skills'},
+				{title: 'Contact', icon: 'email', path: '/contact'}
 			];
 
 			//check if link is for the active page, and if so returns true
