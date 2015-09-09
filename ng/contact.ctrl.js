@@ -31,7 +31,7 @@ angular.module('app')
 		//hide message after 10 seconds
 		$timeout(function(){
 				$scope.showResult = false;
-		}, 5000);
+		}, 3000);
 	};
 
 	//resultMessage displays a success or failure message below the form

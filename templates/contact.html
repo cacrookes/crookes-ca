@@ -4,7 +4,6 @@
 	</md-toolbar>
 	<div id="viewPageMain">
 		<md-content layout-padding>
-			<div ng-model="resultMessage" class="emailResult message fadein fadeout" ng-class="{'sendError': sendError}" ng-show="showResult">{{ resultMessage }}</div>
 			<form ng-submit="submit(contactform)" name="contactform" novalidate>
 				<md-input-container>
 					<label for="inputName">Name</label>
@@ -31,10 +30,9 @@
 						<div ng-message="required">Please enter a message.</div>
 					</div>
 				</md-input-container>
-				<div>
-					<button type="submit" class="sendMailBtn" ng-disabled="contactform.$invalid">
-						Send Mail
-					</button>
+				<div layout="row" layout-sm="column">
+					<md-button type="submit" class="md-raised md-primary emailButton" ng-disabled="contactform.$invalid">Send Mail</md-button>
+					<div ng-model="resultMessage" class="emailResult fadein fadeout" ng-class="{'sendError': sendError}" ng-show="showResult">{{ resultMessage }}</div>
 				</div>
 
 			</form>
