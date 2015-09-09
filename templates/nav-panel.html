@@ -1,12 +1,10 @@
-<!-- <input type="checkbox" id="navbar-checkbox" class="navbar-checkbox"> -->
 <nav>
 	<ul class='clearfix'>
-		<li ng-repeat="navlink in navlinks"  id="{{navlink.title}}-link">
+		<li ng-repeat="navlink in navlinks" id="{{navlink.title}}-link">
 			<md-button class="md-raised" href="/#{{navlink.path}}">
 				<md-icon>{{navlink.icon}}</md-icon>
 				{{navlink.title}}
 			</md-button>
 		</li>
 	</ul>
-	<label for="navbar-checkbox" class="navbar-handle"></label>
 </nav>

@@ -1,0 +1,13 @@
+<md-menu md-position-mode="target-right target">
+	<md-button aria-label="Open menu" class="md-icon-button" ng-click="$mdOpenMenu($event)">
+		<md-icon>menu</md-icon>
+	</md-button>
+	<md-menu-content width="5">
+		<md-menu-item ng-repeat="navlink in navlinks">
+			<md-button href="/#{{navlink.path}}">
+				<md-icon>{{navlink.icon}}</md-icon>
+				<span md-menu-align>{{navlink.title}}</span>
+			</md-button>
+		</md-menu-item>
+	</md-menu-content>
+</md-menu>

@@ -165,15 +165,12 @@ header{
 }
 
 nav{
+  display: none;
   margin: 0;
   margin-bottom: 1em;
   md-icon{
     color: white;
   }
-}
-
-#homePage nav{
-  margin-bottom: 0;
 }
 
 a{
@@ -210,17 +207,29 @@ ul.noStyle{
 #Contact-link a{
   background: contactColour;
 }
+//------ end nav buttons -------------------
 
-#educationPage h3{
-  margin-bottom: .3em;
+
+md-menu-item{
+  a span{
+    color: #000;
+  }
 }
 
-#continuingEd{
-  padding-top: 1.5em;
-}
-
-#continuingEd a{
-  padding-left: 5px;
+#homePage{
+  color: white;
+  text-align: center;
+  nav{
+    display: inline;
+    a{
+      color: white;
+    }
+  }
+  p{
+    font-family: 'Pacifico', cursive;
+    font-size: 24px;
+    font-weight: bold;
+  }
 }
 
 #aboutPage{
@@ -230,8 +239,20 @@ ul.noStyle{
   }
 }
 
-#skillsPage{
+#educationPage{
+   h3{
+    margin-bottom: .3em;
+  }
+  #continuingEd{
+    padding-top: 1.5em;
+    a{
+      padding-left: 5px;
+    }
+  }
 
+}
+
+#skillsPage{
   #skillLegend{
     border: 2px dashed skillsColour;
     margin-bottom: 1.5em;
@@ -289,6 +310,7 @@ ul.noStyle{
     background-color: red;
   }
 }
+
 // style confirmation messages
 .fadein.ng-hide-remove,
 .fadeout.ng-hide-add {
@@ -326,9 +348,28 @@ div.clear{
 }
 
 @media only screen and (min-width: 601px) {
-  .aboutPage p{
-    font-size: 1.3em;
-    line-height: 1.5em;
+  nav{
+    display: inline;
+  }
+
+  hamburger-panel{
+    display: none;
+  }
+
+  #homePage{
+    nav{
+      display: none;
+    }
+    p{
+      font-size: 36px;
+    }
+  }
+
+  #aboutPage{
+    p{
+       font-size: 1.3em;
+      line-height: 1.5em;
+    }
   }
 }
 

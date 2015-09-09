@@ -4,6 +4,7 @@
 			<md-icon>school</md-icon>
 			<h1><span>Education</span></h1>
 			<span flex></span>
+			<hamburger-panel></hamburger-panel>
 		</div>
 	</md-toolbar>
 	<div id="viewPageMain">
@@ -18,15 +19,19 @@
 		</section>
 		<section id='continuingEd' class='clear'>
 			<h2>Continuing Education</h2>
-			<h3><img src="/img/Udacity_Logo.svg" alt="Udacity" height="42"></h3>
-			<div ng-repeat="course in courses | filter: {school: 'udacity'}" class="row">
-				<div>
-					{{course.name}}<small><a href="{{course.course_link}}" target="_blank">(course)</a><a href="{{course.certificate_link}}" target="_blank">(certificate)</a></small>
+			<div layout="row" layout-align="start start">
+				<h3><img src="/img/Udacity_Logo.svg" alt="Udacity" height="42"></h3>
+				<div layout="column">
+					<div ng-repeat="course in courses | filter: {school: 'udacity'}">
+						<div>
+							{{course.name}}<small><a href="{{course.course_link}}" target="_blank">(course)</a><a href="{{course.certificate_link}}" target="_blank">(certificate)</a></small>
+						</div>
+					</div>
 				</div>
 			</div>
 			<md-divider></md-divider>
 			<h3><img src="/img/EdX.svg" alt="edx" height="42"></h3>
-			<div ng-repeat="course in courses | filter: {school: 'edx'}" class="row">
+			<div ng-repeat="course in courses | filter: {school: 'edx'}">
 				<div>
 					{{course.name}}<small><a href="{{course.course_link}}" target="_blank">(course)</a><a href="{{course.certificate_link}}" target="_blank">(certificate)</a></small>
 				</div>
