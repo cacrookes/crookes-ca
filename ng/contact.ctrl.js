@@ -26,6 +26,7 @@ angular.module('app')
 	// shows a confirmation message, indicating whether the mail was successfully
 	// sent or not
 	var showMessage = function(message){
+		$scope.isSending = false;
 		$scope.resultMessage = message;
 		$scope.showResult = true;
 		//hide message after 10 seconds
@@ -33,6 +34,9 @@ angular.module('app')
 				$scope.showResult = false;
 		}, 3000);
 	};
+
+	// isSending is used to show the progress circle on the page while waiting for mail to send
+	$scope.isSending = false;
 
 	//resultMessage displays a success or failure message below the form
 	$scope.resultMessage = "";
@@ -42,6 +46,7 @@ angular.module('app')
 	$scope.submit = function(contactform){
 		//checks if form passes clientside validtation
 		if (contactform.$valid) {
+			$scope.isSending = true;
 			MailSvc.send($scope.emailData)
 			.success(function(data){
 				//mail service returned the mail was successfully sent

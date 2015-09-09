@@ -312,6 +312,15 @@ md-menu-item{
   .emailResult.sendError{
     background-color: red;
   }
+
+  .linearProgress{
+    display: inline; //This is hidden when layout > 600px
+  }
+
+  .circularProgress{
+    display: none; //This will be displayed when layout > 600px
+  }
+
 }
 
 // style confirmation messages
@@ -372,6 +381,16 @@ div.clear{
     p{
        font-size: 1.3em;
       line-height: 1.5em;
+    }
+  }
+
+  #contactPage{
+    .linearProgress{
+      display: none; //This is hidden when layout > 600px
+    }
+
+    .circularProgress{
+      display: inline; //This will be displayed when layout > 600px
     }
   }
 }

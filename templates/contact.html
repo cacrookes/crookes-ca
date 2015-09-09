@@ -40,6 +40,11 @@
 						<md-icon>send</md-icon>
 						Send Mail
 					</md-button>
+					<!-- Display circular if layout is greater than 600px, linear otherwise -->
+					<md-progress-circular class="circularProgress" md-mode="indeterminate" ng-show="isSending"></md-progress-circular>
+					<div flex class="linearProgress">
+						<md-progress-linear class="linearProgress" md-mode="indeterminate" ng-show="isSending"></md-progress-circular>
+					</div>
 					<div ng-model="resultMessage" class="emailResult fadein fadeout" ng-class="{'sendError': sendError}" ng-show="showResult">{{ resultMessage }}</div>
 				</div>
 
