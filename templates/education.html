@@ -22,7 +22,7 @@
 			<md-list>
 				<md-list-item layout="column" layout-align="start start" ng-repeat="school in schools">
 					<div>
-						<img src="/img/{{school.logo}}" alt="{{school.name}}" height="24">
+						<img ng-src="/img/{{school.logo}}" alt="{{school.name}}" height="24">
 					</div>
 					<md-list layout="column">
 						<md-list-item class="course" ng-repeat="course in courses | filter: {school: school.name}">
